@@ -1,87 +1,110 @@
 Cloud Computing & DevOps – Task 2
-Project Overview
+Containerization Using Docker and Deployment on a Cloud Virtual Machine
+📌 Objective
 
-This project demonstrates containerization of a web application using Docker and deployment on a Cloud Virtual Machine (AWS EC2).
+The objective of this task is to understand containerization using Docker and deploy a containerized application on a cloud-based virtual machine (AWS EC2).
 
-The objective of this task is to understand how applications can be packaged into lightweight, portable containers and deployed in a scalable cloud environment using DevOps practices.
+This project demonstrates how modern applications can be packaged into portable containers and deployed efficiently in a cloud environment using DevOps practices.
 
-Technologies Used
+🧱 Project Architecture
 
-Docker
+Local Machine
+→ Docker Image Creation
+→ Docker Container Execution
+→ AWS EC2 Virtual Machine
+→ Docker Installation on EC2
+→ Cloud Deployment & Public Access
 
-AWS EC2
+🛠 Technologies Used
 
-Linux (Ubuntu)
+Docker (Containerization)
 
-Python (Flask)
+AWS EC2 (Cloud Virtual Machine)
+
+Ubuntu Linux
+
+Python (Flask Web Application)
 
 Git & GitHub
 
-Project Workflow
+Terminal / Command Line
+
+🔄 Implementation Steps
+1️⃣ Application Development
 
 Created a simple Flask web application.
 
-Wrote a Dockerfile to containerize the application.
+Verified application runs locally.
 
-Built the Docker image locally.
+2️⃣ Docker Containerization
 
-Ran and tested the container on localhost.
+Created a Dockerfile.
 
-Launched an AWS EC2 (Ubuntu) instance.
-
-Installed Docker on the EC2 instance.
-
-Transferred project files to the cloud VM.
-
-Built and ran the Docker container on EC2.
-
-Configured Security Group to allow HTTP traffic (Port 5000).
-
-Accessed the application using the EC2 Public IP.
-
-How to Run Locally
-Step 1 – Build Docker Image
+Built Docker image using:
 
 docker build -t devops-task2 .
 
-Step 2 – Run Container
+Ran container locally using:
 
 docker run -p 5000:5000 devops-task2
 
-Now open in your browser:
+Verified application at:
+
 http://localhost:5000
 
-Cloud Deployment (AWS EC2)
+3️⃣ Cloud Deployment (AWS EC2)
 
-Launch EC2 instance (Ubuntu)
+Launched Ubuntu EC2 instance.
 
-Install Docker
+Connected via SSH.
 
-Upload project files to server
+Installed Docker on EC2.
 
-Build Docker image on EC2
+Transferred project files to server.
 
-Run container on EC2
+Built Docker image on EC2.
 
-Allow port 5000 in Security Group
+Ran container on EC2.
 
-Access using:
+Opened Port 5000 in Security Group.
 
-http://<your-ec2-public-ip>:5000
+Accessed application using:
 
-Example:
-http://13.233.100.25:5000
+http://<EC2-Public-IP>:5000
 
-Learning Outcomes
+🌐 Deployment Outcome
 
-Understanding Docker image and container lifecycle
+The Dockerized application was successfully deployed on a cloud virtual machine and made accessible via public IP address.
 
-Hands-on cloud deployment using AWS EC2
+This demonstrates real-world DevOps workflow:
+Development → Containerization → Cloud Deployment → Public Access
 
-Basic Linux command-line usage
+📚 Key Concepts Demonstrated
 
-Practical implementation of DevOps workflow
+Docker image and container lifecycle
 
-Author: 
+Dockerfile creation and build process
+
+Port mapping and container networking
+
+Linux command-line operations
+
+AWS EC2 instance management
+
+Security group configuration
+
+Cloud-based application hosting
+
+🎯 Learning Outcomes
+
+Understanding container-based deployment
+
+Practical exposure to AWS cloud services
+
+Hands-on DevOps workflow implementation
+
+Ability to deploy scalable cloud applications
+
+Author:
 
 Vishal Vishwakarma
